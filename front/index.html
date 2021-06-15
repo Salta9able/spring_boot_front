@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div  class="container mt-4">
+        <div class="position-absolute" style="top: 20px; right: 100px;">
+            <a id="logout_user" class="h6" style="text-decoration: underline; cursor: pointer; color: black;">Log out</a>
+        </div>
+        <h1 class="h2 text-center">List of users</h1>
+        <div>
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Occupation</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody  id="table"> 
+    
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center">
+            <a class="btn btn-dark" href="/user_form.html" role="button">Add new user</a>
+        </div>
+    </div>
+
+    <div id="modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h1 class="h2 text-center">Edit user</h1>
+                <div class="container" style="max-width: 600px;">
+                    <form id="form_edituser" action="" method="put">
+                        <div class="form-group">
+                            <label for="edituser_name">Name</label>
+                            <input name="name" id="edituser_name" type="text" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="edituser_password">Password</label>
+                            <input name="password" id="edituser_password" type="password" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="edituser_email">Email address</label>
+                            <input name="email" id="edituser_email" type="email" class="form-control" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="edituser_occupation">Occupation</label>
+                            <input name="occupation" id="edituser_occupation" type="text" class="form-control" required/>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="edituser_is_admin" value="admin">
+                            <label class="form-check-label" for="edituser_is_admin">Admin</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="edituser_is_user" value="user">
+                            <label class="form-check-label" for="edituser_is_user">User</label>
+                        </div>
+                        <div class="container text-center">
+                            <button type="submit" class="btn btn-dark">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <script src="/js/index.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
